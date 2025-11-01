@@ -1,0 +1,59 @@
+/* Logo component styles (CSS Modules) */
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .container:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+.lottie {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+.amar,
+.jannat {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.02em;
+  transition: opacity 0.3s ease;
+}
+
+.amar {
+  background-image: linear-gradient(90deg, #3b82f6, #06b6d4);
+  letter-spacing: 0.03em;
+}
+
+.jannat {
+  background-image: linear-gradient(90deg, #ef4444, #f59e0b);
+}
+
+.container:hover .amar,
+.container:hover .jannat {
+  opacity: 0.95;
+}

@@ -1,0 +1,28 @@
+{
+  "index": "কিছু কথা",
+  "bcs-exam-preparation": {
+    "title": "BCS প্রস্তুতি"
+  },
+  "primary-assistant-teacher-exam-preparation": {
+    "title": "প্রাইমারি সহকারী শিক্ষক"
+  },
+  "ntrca-school-teacher-exam-preparation": {
+    "title": "NTRCA স্কুল শিক্ষক"
+  },
+  "ntrca-college-teacher-exam-preparation": {
+    "title": "NTRCA কলেজ শিক্ষক"
+  },
+  "web-development-course-bangla": {
+    "title": "ওয়েব ডেভেলপমেন্ট কোর্স বাংলায়"
+  },
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://github.com/codedbymojnu/",
+    "newWindow": true
+  }
+}

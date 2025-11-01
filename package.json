@@ -1,0 +1,40 @@
+{
+  "name": "amar-jannat",
+  "version": "0.0.1",
+  "description": "Amar Jannat - মজনু মিয়ার শান্তির জায়গা, সুখের জগৎ ও নিজের পৃথিবী। এখানে তিনি সারাজীবনের জ্ঞান, অভিজ্ঞতা ও জীবনের শিক্ষা শেয়ার করেন।",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "node ./scripts/generate-sitemap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedbymojnu/amar-jannat.git"
+  },
+  "author": "Md. Mojnu Miah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codedbymojnu/amar-jannat/issues"
+  },
+  "homepage": "https://github.com/codedbymojnu/amar-jannat#readme",
+  "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
+    "@giscus/react": "^3.1.0",
+    "@vercel/analytics": "^1.5.0",
+    "glob": "^11.0.3",
+    "lottie-react": "^2.4.1",
+    "next": "^13.0.6",
+    "nextra": "latest",
+    "nextra-theme-docs": "latest",
+    "raw-loader": "^4.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.10",
+    "autoprefixer": "^10.4.20",
+    "sitemap": "^8.0.0",
+    "typescript": "^4.9.3"
+  }
+}

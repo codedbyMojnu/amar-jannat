@@ -13,20 +13,20 @@ module.exports = {
     // Higher priority for main sections
     const priorities = {
       "/": 1.0,
-      "/bcs-exam-preparation-bangladesh": 0.9,
-      "/primary-assistant-teacher-exam-preparation": 0.9,
-      "/ntrca-school-teacher-exam-preparation": 0.9,
-      "/ntrca-college-teacher-exam-preparation": 0.9,
-      "/web-development-course-bangla": 0.9,
+      "/bcs": 0.9,
+      "/primary-assistant-teacher": 0.9,
+      "/ntrca-school-teacher": 0.9,
+      "/ntrca-college-teacher": 0.9,
+      "/web-development": 0.9,
     };
 
     const changefreqs = {
       "/": "daily",
-      "/bcs-exam-preparation-bangladesh": "weekly",
-      "/primary-assistant-teacher-exam-preparation": "weekly",
-      "/ntrca-school-teacher-exam-preparation": "weekly",
-      "/ntrca-college-teacher-exam-preparation": "weekly",
-      "/web-development-course-bangla": "weekly",
+      "/bcs": "weekly",
+      "/primary": "weekly",
+      "/ntrca-school-teacher": "weekly",
+      "/ntrca-college-teacher": "weekly",
+      "/web-development": "weekly",
     };
 
     // Find matching pattern

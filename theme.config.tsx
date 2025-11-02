@@ -215,7 +215,7 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="Content-Language" content="bn" />
         <meta
           name="google-site-verification"
-          content="s16CTTx0a9_ZliO-aTDR3svggMpO8qgVTu4k49eyqb0"
+          content="-0oyDJ10CwLMNFF2z2zhS90QOrbzypnffqi7A4LkYbU"
         />
         {/* Favicon and App Icons */}
         <link rel="icon" href="/icons/amar-jannat-icon.png" />

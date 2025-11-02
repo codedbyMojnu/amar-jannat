@@ -30,6 +30,9 @@ const SyllabusCard = dynamic(() => import("./components/SyllabusCard"), {
 const SyllabusDetail = dynamic(() => import("./components/SyllabusDetail"), {
   ssr: false,
 }) as React.FC<any>;
+const CourseCards = dynamic(() => import("./components/CourseCards"), {
+  ssr: false,
+}) as React.FC<any>;
 
 const config: DocsThemeConfig = {
   logo: <Logo />,
@@ -62,6 +65,7 @@ const config: DocsThemeConfig = {
     CollaborateSection,
     SyllabusCard,
     SyllabusDetail,
+    CourseCards,
   },
   sidebar: {
     defaultMenuCollapseLevel: 1, // here

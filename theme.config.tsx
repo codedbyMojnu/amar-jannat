@@ -208,7 +208,7 @@ const config: DocsThemeConfig = {
       sectionSEO[slug]?.description ||
       "Amar Jannat - মজনু মিয়ার জান্নাত হলো একটি চাকরি প্রস্তুতি প্ল্যাটফর্ম। এখানে পাবেন ওয়েব ডেভেলপমেন্ট, বিসিএস প্রস্তুতি, প্রাইমারি সহকারী শিক্ষক, এনটিআরসিএস্কুল/কলেজ শিক্ষক চাকরির প্রস্তুতির রিসোর্স।";
     const effectiveTitle = title || sectionSEO[slug]?.title;
-    
+
     // Author information
     const authorInfo = {
       "@type": "Person",
@@ -270,20 +270,29 @@ const config: DocsThemeConfig = {
           content="https://amarjannat.vercel.app/icons/amar-jannat-icon.png"
         />
         <meta name="robots" content="index,follow" />
-        <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        <meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-        
+        <meta
+          name="googlebot"
+          content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+        />
+        <meta
+          name="bingbot"
+          content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+        />
+
         {/* Geo targeting for Bangladesh */}
         <meta name="geo.region" content="BD" />
         <meta name="geo.placename" content="Bangladesh" />
         <meta name="geo.position" content="23.8103;90.4125" />
         <meta name="ICBM" content="23.8103, 90.4125" />
-        
+
         {/* Additional OG tags */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:updated_time" content={new Date().toISOString()} />
-        <meta property="article:publisher" content="https://www.facebook.com/amar.jannat.bd" />
+        <meta
+          property="article:publisher"
+          content="https://www.facebook.com/amar.jannat.bd"
+        />
         <meta property="article:author" content="Md. Mojnu Miah" />
 
         {/* JSON-LD: Organization */}

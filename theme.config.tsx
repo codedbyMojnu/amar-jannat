@@ -63,6 +63,9 @@ const config: DocsThemeConfig = {
     SyllabusCard,
     SyllabusDetail,
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1, // here
+  },
   useNextSeoProps() {
     if (typeof window !== "undefined" && window.location.pathname !== "/") {
       return {
@@ -86,58 +89,97 @@ const config: DocsThemeConfig = {
       string,
       { description: string; keywords: (string | undefined)[]; title?: string }
     > = {
-      "bcs-exam-preparation-bangladesh": {
-        title: "BCS প্রস্তুতি — Bangladesh",
+      "bcs-exam-preparation": {
+        title: "BCS প্রস্তুতি ২০২৫ (প্রিলি, লিখিত, ভাইভা) সম্পূর্ণ গাইডলাইন",
         description:
-          "BCS প্রিলিমিনারি, লিখিত ও ভাইভা প্রস্তুতি — সিলেবাস, টপিকভিত্তিক নোটস, MCQ প্র্যাকটিস ও মডেল টেস্ট।",
+          "BCS Preparation Bangladesh: সর্বশেষ সিলেবাস, প্রশ্ন ব্যাংক, মডেল টেস্ট, এবং কার্যকর প্রস্তুতির কৌশল। প্রিলিমিনারি, লিখিত, ও ভাইভা পরীক্ষার জন্য সেরা রিসোর্স।",
         keywords: [
-          "BCS Preparation",
+          "BCS Preparation Bangladesh",
           "BCS প্রস্তুতি",
-          "BCS Preliminary",
-          "BCS Written",
-          "BCS Viva",
-          "BCS MCQ",
-          "BCS Model Test",
+          "BCS Preliminary Syllabus 2025",
+          "BCS Written Question Bank",
+          "BCS Viva Tips",
+          "47th BCS",
+          "48th BCS",
           "বিসিএস প্রস্তুতি",
         ],
       },
-      "primary-assistant-teacher-exam-preparation": {
-        title: "প্রাইমারি সহকারী শিক্ষক নিয়োগ প্রস্তুতি",
+      "primary-assistant-teacher": {
+        title: "প্রাইমারি সহকারী শিক্ষক নিয়োগ প্রস্তুতি ২০২৫",
         description:
-          "DPE/প্রাইমারি সহকারী শিক্ষক নিয়োগের প্রস্তুতি — সিলেবাস, টপিকভিত্তিক নোটস, MCQ ও মডেল টেস্ট।",
+          "DPE প্রাইমারি সহকারী শিক্ষক নিয়োগ পরীক্ষার সম্পূর্ণ প্রস্তুতি। সর্বশেষ সিলেবাস, প্রশ্ন সমাধান, গুরুত্বপূর্ণ সাজেশন এবং ফাইনাল মডেল টেস্ট।",
         keywords: [
-          "Primary Assistant Teacher",
-          "Primary Head Teacher",
+          "Primary Assistant Teacher Exam",
           "DPE Exam Preparation",
-          "প্রাইমারি সহকারী শিক্ষক",
-          "DPE Model Test",
-          "Primary School Teacher MCQ",
+          "প্রাইমারি শিক্ষক নিয়োগ",
+          "dpe question bank pdf",
+          "primary model test",
+          "প্রাইমারি সাজেশন",
         ],
       },
-      "ntrca-school-teacher-exam-preparation": {
-        title: "NTRCA স্কুল শিক্ষক প্রস্তুতি",
+      "ntrca-school-teacher": {
+        title: "NTRCA স্কুল শিক্ষক নিবন্ধন প্রস্তুতি (১৭তম ও ১৮তম)",
         description:
-          "NTRCA স্কুল শিক্ষক নিবন্ধন প্রস্তুতি — সিলেবাস, টপিকভিত্তিক নোটস, MCQ ও মডেল টেস্ট।",
+          "NTRCA স্কুল ও স্কুল-২ লেভেলের শিক্ষক নিবন্ধন পরীক্ষার পূর্ণাঙ্গ প্রস্তুতি। সিলেবাস, বিগত সালের প্রশ্ন সমাধান, এবং চূড়ান্ত মডেল টেস্ট।",
         keywords: [
           "NTRCA School Teacher",
-          "NTRCA Registration",
-          "NTRCA MCQ",
-          "NTRCA Model Test",
-          "MPO School Teacher",
+          "18th NTRCA Circular",
+          "NTRCA School Syllabus",
           "এনটিআরসিএ স্কুল শিক্ষক",
+          "NTRCA Question Bank",
+          "বেসরকারি শিক্ষক নিবন্ধন",
         ],
       },
-      "ntrca-college-teacher-exam-preparation": {
-        title: "NTRCA কলেজ শিক্ষক প্রস্তুতি",
+      "ntrca-college-teacher": {
+        title: "NTRCA কলেজ প্রভাষক নিবন্ধন প্রস্তুতি (১৭তম ও ১৮তম)",
         description:
-          "NTRCA কলেজ শিক্ষক নিবন্ধন প্রস্তুতি — সিলেবাস, টপিকভিত্তিক নোটস, MCQ ও মডেল টেস্ট।",
+          "NTRCA কলেজ লেভেলের প্রভাষক নিবন্ধন পরীক্ষার পূর্ণাঙ্গ প্রস্তুতি। বিষয়ভিত্তিক সিলেবাস, বিগত সালের প্রশ্ন বিশ্লেষণ, এবং চূড়ান্ত মডেল টেস্ট।",
         keywords: [
           "NTRCA College Teacher",
-          "College Teacher Registration",
-          "NTRCA Preparation",
-          "NTRCA Model Test",
-          "MPO College Teacher",
+          "18th NTRCA College Circular",
+          "NTRCA College Syllabus",
           "এনটিআরসিএ কলেজ শিক্ষক",
+          "NTRCA Lecturer",
+          "বেসরকারি প্রভাষক নিবন্ধন",
+        ],
+      },
+      "secondary-level": {
+        title: "মাধ্যমিক (SSC) পর্যায়ের সকল বিষয়ের লেকচার ও নোটস",
+        description:
+          "নবম-দশম শ্রেণীর (SSC) সকল বিষয়ের অধ্যায়ভিত্তিক লেকচার, হ্যান্ড নোট, এবং বোর্ড পরীক্ষার প্রস্তুতির জন্য পূর্ণাঙ্গ গাইডলাইন।",
+        keywords: [
+          "SSC Preparation",
+          "Class 9-10 All Subjects",
+          "মাধ্যমিক",
+          "নবম দশম শ্রেণী",
+          "SSC Suggestion",
+          "SSC Board Question",
+        ],
+      },
+      "higher-secondary-level": {
+        title: "উচ্চ মাধ্যমিক (HSC) সকল বিষয়ের লেকচার ও নোটস",
+        description:
+          "একাদশ-দ্বাদশ শ্রেণীর (HSC) বিজ্ঞান, মানবিক ও ব্যবসায় শিক্ষা শাখার সকল বিষয়ের অধ্যায়ভিত্তিক লেকচার, হ্যান্ড নোট, এবং বোর্ড পরীক্ষার সেরা প্রস্তুতি।",
+        keywords: [
+          "HSC Preparation",
+          "Class 11-12 All Subjects",
+          "উচ্চ মাধ্যমিক",
+          "একাদশ দ্বাদশ শ্রেণী",
+          "HSC Suggestion",
+          "HSC Board Question",
+        ],
+      },
+      "web-development": {
+        title: "বাংলা ভাষায় ওয়েব ডেভেলপমেন্ট শিখুন (সম্পূর্ণ কোর্স)",
+        description:
+          "শূন্য থেকে একজন প্রফেশনাল ওয়েব ডেভেলপার হওয়ার পূর্ণাঙ্গ বাংলা গাইডলাইন। HTML, CSS, JavaScript, React, এবং Next.js শিখে নিজের ক্যারিয়ার গড়ুন।",
+        keywords: [
+          "Web Development Bangla",
+          "Learn Web Development",
+          "ওয়েব ডেভেলপমেন্ট",
+          "React Bangla Tutorial",
+          "JavaScript Bangla",
+          "প্রোগ্রামিং শিখুন",
         ],
       },
     };

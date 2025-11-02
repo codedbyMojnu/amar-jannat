@@ -3,18 +3,25 @@
   "bcs-exam-preparation": {
     "title": "BCS প্রস্তুতি"
   },
-  "primary-assistant-teacher-exam-preparation": {
+  "primary-assistant-teacher": {
     "title": "প্রাইমারি সহকারী শিক্ষক"
   },
-  "ntrca-school-teacher-exam-preparation": {
+  "ntrca-school-teacher": {
     "title": "NTRCA স্কুল শিক্ষক"
   },
-  "ntrca-college-teacher-exam-preparation": {
+  "ntrca-college-teacher": {
     "title": "NTRCA কলেজ শিক্ষক"
   },
-  "web-development-course-bangla": {
+  "web-development": {
     "title": "ওয়েব ডেভেলপমেন্ট কোর্স বাংলায়"
   },
+  "higher-secondary-level": {
+    "title": "উচ্চ মাধ্যমিক পড়াশোনা"
+  },
+  "secondary-level": {
+    "title": "মাধ্যমিক পড়াশোনা"
+  },
+
   "about": {
     "title": "About",
     "type": "page"

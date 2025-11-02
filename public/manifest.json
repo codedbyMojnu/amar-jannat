@@ -1,0 +1,43 @@
+{
+  "name": "Amar Jannat — মজনু মিয়ার জান্নাত",
+  "short_name": "Amar Jannat",
+  "description": "BCS, Primary, NTRCA এবং ওয়েব ডেভেলপমেন্ট প্রস্তুতির সেরা প্ল্যাটফর্ম",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "lang": "bn",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icons/amar-jannat-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/amar-jannat-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "career", "job preparation"],
+  "shortcuts": [
+    {
+      "name": "BCS প্রস্তুতি",
+      "short_name": "BCS",
+      "description": "BCS পরীক্ষার প্রস্তুতি",
+      "url": "/bcs-exam-preparation-bangladesh",
+      "icons": [{ "src": "/icons/amar-jannat-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "প্রাইমারি শিক্ষক",
+      "short_name": "Primary",
+      "description": "প্রাইমারি সহকারী শিক্ষক নিয়োগ",
+      "url": "/primary-assistant-teacher-exam-preparation",
+      "icons": [{ "src": "/icons/amar-jannat-icon.png", "sizes": "192x192" }]
+    }
+  ]
+}

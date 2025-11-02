@@ -6,9 +6,12 @@ import Logo from "./components/Logo";
 import PdfDownloader from "./components/PdfDownloader";
 import VideoPlayer from "./components/VideoPlayer";
 
-const GiscusComments = dynamic(() => import("./components/GiscusComments"), {
-  ssr: false,
-}) as React.FC<any>;
+const FacebookComments = dynamic(
+  () => import("./components/FacebookComments"),
+  {
+    ssr: false,
+  }
+) as React.FC<any>;
 const LiveCodeEditor = dynamic(() => import("./components/LiveCodeEditor"), {
   ssr: false,
 }) as React.FC<any>;
@@ -54,7 +57,7 @@ const config: DocsThemeConfig = {
   },
   components: {
     Donate,
-    GiscusComments,
+    FacebookComments,
     Reveal,
     Pitfall,
     LiveCodeEditor,
@@ -93,7 +96,7 @@ const config: DocsThemeConfig = {
       string,
       { description: string; keywords: (string | undefined)[]; title?: string }
     > = {
-      "bcs-exam-preparation": {
+      bcs: {
         title: "BCS প্রস্তুতি ২০২৫ (প্রিলি, লিখিত, ভাইভা) সম্পূর্ণ গাইডলাইন",
         description:
           "BCS Preparation Bangladesh: সর্বশেষ সিলেবাস, প্রশ্ন ব্যাংক, মডেল টেস্ট, এবং কার্যকর প্রস্তুতির কৌশল। প্রিলিমিনারি, লিখিত, ও ভাইভা পরীক্ষার জন্য সেরা রিসোর্স।",
@@ -203,8 +206,19 @@ const config: DocsThemeConfig = {
     const description =
       meta?.description ||
       sectionSEO[slug]?.description ||
-      "Amar Jannat - মজনু মিয়ার জান্নাত হলো একটি চাকরি প্রস্তুতি প্ল্যাটফর্ম। এখানে পাবেন ওয়েব ডেভেলপমেন্ট, বিসিএস প্রস্তুতি, প্রাইমারি সহকারী শিক্ষক, এনটিআরসিএ স্কুল/কলেজ শিক্ষক চাকরির প্রস্তুতির রিসোর্স।";
+      "Amar Jannat - মজনু মিয়ার জান্নাত হলো একটি চাকরি প্রস্তুতি প্ল্যাটফর্ম। এখানে পাবেন ওয়েব ডেভেলপমেন্ট, বিসিএস প্রস্তুতি, প্রাইমারি সহকারী শিক্ষক, এনটিআরসিএস্কুল/কলেজ শিক্ষক চাকরির প্রস্তুতির রিসোর্স।";
     const effectiveTitle = title || sectionSEO[slug]?.title;
+    
+    // Author information
+    const authorInfo = {
+      "@type": "Person",
+      name: "Md. Mojnu Miah",
+      url: "https://amarjannat.vercel.app/about",
+      sameAs: [
+        "https://github.com/codedbyMojnu",
+        "https://www.facebook.com/amar.jannat.bd",
+      ],
+    };
 
     return (
       <>
@@ -256,6 +270,21 @@ const config: DocsThemeConfig = {
           content="https://amarjannat.vercel.app/icons/amar-jannat-icon.png"
         />
         <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        <meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+        
+        {/* Geo targeting for Bangladesh */}
+        <meta name="geo.region" content="BD" />
+        <meta name="geo.placename" content="Bangladesh" />
+        <meta name="geo.position" content="23.8103;90.4125" />
+        <meta name="ICBM" content="23.8103, 90.4125" />
+        
+        {/* Additional OG tags */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:updated_time" content={new Date().toISOString()} />
+        <meta property="article:publisher" content="https://www.facebook.com/amar.jannat.bd" />
+        <meta property="article:author" content="Md. Mojnu Miah" />
 
         {/* JSON-LD: Organization */}
         <script
@@ -264,14 +293,31 @@ const config: DocsThemeConfig = {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "EducationalOrganization",
               name: "Amar Jannat",
+              alternateName: "মজনু মিয়ার জান্নাত",
               url,
               logo: "https://amarjannat.vercel.app/icons/amar-jannat-icon.png",
+              description: description,
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "BD",
+                addressLocality: "Dhaka",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Customer Support",
+                availableLanguage: ["Bengali", "English"],
+              },
               sameAs: [
                 "https://github.com/codedbymojnu",
                 "https://discord.gg/8ZpFFu5d",
+                "https://www.facebook.com/amar.jannat.bd",
               ],
+              founder: authorInfo,
+              foundingDate: "2025",
+              areaServed: "BD",
+              knowsLanguage: ["bn", "en"],
             }),
           }}
         />
@@ -285,10 +331,24 @@ const config: DocsThemeConfig = {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Amar Jannat",
+              alternateName: "মজনু মিয়ার জান্নাত",
               url,
+              description: description,
+              inLanguage: "bn",
+              publisher: {
+                "@type": "Organization",
+                name: "Amar Jannat",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://amarjannat.vercel.app/icons/amar-jannat-icon.png",
+                },
+              },
               potentialAction: {
                 "@type": "SearchAction",
-                target: `${url}/?q={search_term_string}`,
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: `${url}/?q={search_term_string}`,
+                },
                 "query-input": "required name=search_term_string",
               },
             }),

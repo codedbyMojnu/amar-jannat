@@ -3,6 +3,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
 import ProgressBar from "../components/ProgressBar";
+import "../styles/globals.css";
 import "../styles/mdx-table.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -4,8 +4,9 @@
   background-color: #fff;
   padding: 40px 20px;
   max-width: 800px;
-  margin: 0 auto;
   border: 1px solid #eee;
+  margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .mainHeader {
@@ -71,4 +72,14 @@
 
 .normalText {
   margin: 5px 0;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
 }

@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "postbuild": "node ./scripts/generate-sitemap.js"
+    "postbuild": "next-sitemap && node ./scripts/generate-sitemap.js",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -24,16 +24,17 @@
     "@vercel/analytics": "^1.5.0",
     "glob": "^11.0.3",
     "lottie-react": "^2.4.1",
-    "next": "^13.0.6",
+    "next": "^14.2.0",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "raw-loader": "^4.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",
     "autoprefixer": "^10.4.20",
+    "next-sitemap": "^4.2.3",
     "sitemap": "^8.0.0",
     "typescript": "^4.9.3"
   }

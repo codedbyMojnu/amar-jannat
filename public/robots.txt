@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
 
-# Disallow non-content paths
-Disallow: /_next/
-Disallow: /api/
-
 Sitemap: https://amarjannat.vercel.app/sitemap.xml
+

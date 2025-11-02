@@ -213,7 +213,10 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width" />
         <meta httpEquiv="Content-Language" content="bn" />
-
+        <meta
+          name="google-site-verification"
+          content="s16CTTx0a9_ZliO-aTDR3svggMpO8qgVTu4k49eyqb0"
+        />
         {/* Favicon and App Icons */}
         <link rel="icon" href="/icons/amar-jannat-icon.png" />
         <link rel="apple-touch-icon" href="/icons/amar-jannat-icon.png" />

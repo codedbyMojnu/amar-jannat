@@ -7,35 +7,26 @@ import PdfDownloader from "./components/PdfDownloader";
 import VideoPlayer from "./components/VideoPlayer";
 
 const FacebookComments = dynamic(
-  () => import("./components/FacebookComments"),
-  {
-    ssr: false,
-  }
+  () => import("./components/FacebookComments")
 ) as React.FC<any>;
-const LiveCodeEditor = dynamic(() => import("./components/LiveCodeEditor"), {
-  ssr: false,
-}) as React.FC<any>;
-const Donate = dynamic(() => import("./components/Donate"), {
-  ssr: false,
-}) as React.FC<any>;
-const Pitfall = dynamic(() => import("./components/Pitfall"), {
-  ssr: false,
-}) as React.FC<any>;
-const Reveal = dynamic(() => import("./components/Reveal"), {
-  ssr: false,
-}) as React.FC<any>;
+const LiveCodeEditor = dynamic(
+  () => import("./components/LiveCodeEditor")
+) as React.FC<any>;
+const Donate = dynamic(() => import("./components/Donate")) as React.FC<any>;
+const Pitfall = dynamic(() => import("./components/Pitfall")) as React.FC<any>;
+const Reveal = dynamic(() => import("./components/Reveal")) as React.FC<any>;
 const Custom404Page = dynamic(() => import("./components/Custom404Page"), {
   ssr: false,
 }) as React.FC<any>;
-const SyllabusCard = dynamic(() => import("./components/SyllabusCard"), {
-  ssr: false,
-}) as React.FC<any>;
-const SyllabusDetail = dynamic(() => import("./components/SyllabusDetail"), {
-  ssr: false,
-}) as React.FC<any>;
-const CourseCards = dynamic(() => import("./components/CourseCards"), {
-  ssr: false,
-}) as React.FC<any>;
+const SyllabusCard = dynamic(
+  () => import("./components/SyllabusCard")
+) as React.FC<any>;
+const SyllabusDetail = dynamic(
+  () => import("./components/SyllabusDetail")
+) as React.FC<any>;
+const CourseCards = dynamic(
+  () => import("./components/CourseCards")
+) as React.FC<any>;
 
 const config: DocsThemeConfig = {
   logo: <Logo />,

@@ -87,7 +87,7 @@ const config: DocsThemeConfig = {
       string,
       { description: string; keywords: (string | undefined)[]; title?: string }
     > = {
-      bcs: {
+      "bcs-bangladesh": {
         title: "BCS প্রস্তুতি ২০২৫ (প্রিলি, লিখিত, ভাইভা) সম্পূর্ণ গাইডলাইন",
         description:
           "BCS Preparation Bangladesh: সর্বশেষ সিলেবাস, প্রশ্ন ব্যাংক, মডেল টেস্ট, এবং কার্যকর প্রস্তুতির কৌশল। প্রিলিমিনারি, লিখিত, ও ভাইভা পরীক্ষার জন্য সেরা রিসোর্স।",

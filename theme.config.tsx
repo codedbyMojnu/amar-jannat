@@ -1,32 +1,18 @@
-import dynamic from "next/dynamic";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import AudioPlayer from "./components/AudioPlayer";
 import CollaborateSection from "./components/CollaborateSection";
+import CourseCards from "./components/CourseCards";
+import Custom404Page from "./components/Custom404Page";
+import Donate from "./components/Donate";
+import FacebookComments from "./components/FacebookComments";
+import LiveCodeEditor from "./components/LiveCodeEditor";
 import Logo from "./components/Logo";
 import PdfDownloader from "./components/PdfDownloader";
+import Pitfall from "./components/Pitfall";
+import Reveal from "./components/Reveal";
+import SyllabusCard from "./components/SyllabusCard";
+import SyllabusDetail from "./components/SyllabusDetail";
 import VideoPlayer from "./components/VideoPlayer";
-
-const FacebookComments = dynamic(
-  () => import("./components/FacebookComments")
-) as React.FC<any>;
-const LiveCodeEditor = dynamic(
-  () => import("./components/LiveCodeEditor")
-) as React.FC<any>;
-const Donate = dynamic(() => import("./components/Donate")) as React.FC<any>;
-const Pitfall = dynamic(() => import("./components/Pitfall")) as React.FC<any>;
-const Reveal = dynamic(() => import("./components/Reveal")) as React.FC<any>;
-const Custom404Page = dynamic(() => import("./components/Custom404Page"), {
-  ssr: false,
-}) as React.FC<any>;
-const SyllabusCard = dynamic(
-  () => import("./components/SyllabusCard")
-) as React.FC<any>;
-const SyllabusDetail = dynamic(
-  () => import("./components/SyllabusDetail")
-) as React.FC<any>;
-const CourseCards = dynamic(
-  () => import("./components/CourseCards")
-) as React.FC<any>;
 
 const config: DocsThemeConfig = {
   logo: <Logo />,

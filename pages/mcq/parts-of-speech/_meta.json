@@ -43,5 +43,21 @@
   "modal-verb-should-speak": "Rule: Modal + Base Verb",
   "modal-verb-need-not-think": "Modal: 'need not think'",
   "phosphates-need-to-be-added": "Passive: 'need to be added'",
-  "I-am-used-to-watching": "Rule: 'be used to + V-ing'"
+  "I-am-used-to-watching": "Rule: 'be used to + V-ing'",
+  "reported-speech-would-visit": "Reported Speech: 'would visit'",
+  "reported-speech-had-been-sick": "Reported Speech: 'had been sick'",
+  "reported-speech-had-done-the-work": "Reported Speech: 'had done'",
+  "past-tense-sequence-as-soon-as-heard": "Tense: 'as soon as I heard'",
+  "past-continuous-interrupted-by-past-simple": "Tense: Interrupted Past Action",
+  "simple-past-with-ago": "Tense: Simple Past with 'ago'",
+  "simple-past-question-last-night": "Tense: Question with 'last night'",
+  "present-tense-since-simple-past": "Rule: 'It is... since + Past'",
+  "present-perfect-since-simple-past": "Rule: 'Have passed since + Past'",
+  "past-tense-since-past-perfect": "Rule: 'It was... since + Past Perfect'",
+  "past-tense-since-past-perfect-left": "Rule: 'Passed since + Past Perfect'",
+  "present-perfect-continuous-since-morning": "Tense: 'has been playing since...'",
+  "present-perfect-continuous-for-two-hours": "Tense: 'have been reading for...'",
+  "unreal-present-as-if-knew": "Subjunctive: 'as if he knew'",
+  "unreal-past-as-though-were": "Subjunctive: 'as though he were'",
+  "subjunctive-mood-i-wish-i-were": "Subjunctive: 'I wish I were'"
 }

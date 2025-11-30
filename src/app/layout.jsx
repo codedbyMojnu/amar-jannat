@@ -23,6 +23,9 @@ export const metadata = {
   twitter: {
     site: "https://amar-jannat.com",
   },
+  verification: {
+    google: "-0oyDJ10CwLMNFF2z2zhS90QOrbzypnffqi7A4LkYbU",
+  },
 };
 
 export default async function RootLayout({ children }) {

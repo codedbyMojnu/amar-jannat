@@ -52,7 +52,7 @@ export default async function RootLayout({ children }) {
             </Footer>
           }
           editLink="Edit this page on GitHub"
-          docsRepositoryBase="https://github.com/your-repo/amar-jannat/blob/main"
+          docsRepositoryBase="https://github.com/codedbymojnu/amar-jannat/blob/main"
           sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={pageMap}
         >

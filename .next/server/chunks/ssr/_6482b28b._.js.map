@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///D:/amar-jannat/mdx-components.js"],"sourcesContent":["import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'\nimport { AudioPlayer } from './src/components/AudioPlayer'\n\nconst docsComponents = getDocsMDXComponents()\n\nexport const useMDXComponents = components => ({\n  ...docsComponents,\n  ...components,\n  AudioPlayer\n})\n"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEA,MAAM,iBAAiB,IAAA,iMAAoB;AAEpC,MAAM,mBAAmB,CAAA,aAAc,CAAC;QAC7C,GAAG,cAAc;QACjB,GAAG,UAAU;QACb,aAAA,gJAAW;IACb,CAAC","debugId":null}}]
+}

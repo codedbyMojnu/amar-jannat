@@ -12,7 +12,7 @@ export async function generateMetadata(props) {
   const description =
     metadata.description ||
     "Amar Jannat - The best educational resource in Bangladesh.";
-  const url = `https://amar-jannat.com/${params.mdxPath?.join("/") || ""}`;
+  const url = `https://amarjannat.com/${params.mdxPath?.join("/") || ""}`;
   const images = metadata.image ? [metadata.image] : ["/opengraph-image.png"];
 
   return {
@@ -51,7 +51,7 @@ export default async function Page(props) {
     sourceCode,
   } = await importPage(params.mdxPath);
 
-  const url = `https://amar-jannat.com/${params.mdxPath?.join("/") || ""}`;
+  const url = `https://amarjannat.com/${params.mdxPath?.join("/") || ""}`;
 
   return (
     <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>

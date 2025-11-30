@@ -5,7 +5,7 @@ import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 
 export const metadata = {
-  metadataBase: new URL("https://amar-jannat.com"),
+  metadataBase: new URL("https://amarjannat.com"),
   title: {
     template: "%s - Amar Jannat",
   },
@@ -21,7 +21,7 @@ export const metadata = {
     "msapplication-TileColor": "#fff",
   },
   twitter: {
-    site: "https://amar-jannat.com",
+    site: "https://amarjannat.com",
   },
   verification: {
     google: "-0oyDJ10CwLMNFF2z2zhS90QOrbzypnffqi7A4LkYbU",

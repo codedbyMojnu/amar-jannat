@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://amar-jannat.com/sitemap.xml",
+    sitemap: "https://amarjannat.com/sitemap.xml",
   };
 }

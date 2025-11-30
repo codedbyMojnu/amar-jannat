@@ -7,5 +7,5 @@ export function AudioPlayer({ src, title }) {
         Your browser does not support the audio element.
       </audio>
     </div>
-  )
+  );
 }

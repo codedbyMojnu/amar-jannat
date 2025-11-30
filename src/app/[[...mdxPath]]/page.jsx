@@ -9,20 +9,20 @@ export async function generateMetadata(props) {
   return metadata;
 }
 
-const components = getMDXComponents()
-const Wrapper = components.wrapper
+const components = getMDXComponents();
+const Wrapper = components.wrapper;
 
 export default async function Page(props) {
-  const params = await props.params
+  const params = await props.params;
   const {
     default: MDXContent,
     toc,
     metadata,
-    sourceCode
-  } = await importPage(params.mdxPath)
+    sourceCode,
+  } = await importPage(params.mdxPath);
   return (
     <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
       <MDXContent {...props} params={params} components={components} />
     </Wrapper>
-  )
+  );
 }

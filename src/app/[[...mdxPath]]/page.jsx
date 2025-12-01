@@ -1,6 +1,7 @@
 import { generateStaticParamsFor, importPage } from "nextra/pages";
 import { useMDXComponents as getMDXComponents } from "../../../mdx-components";
 import { JsonLd } from "../../components/JsonLd";
+import { LearningProvider } from "../../components/LearningContext";
 
 export const generateStaticParams = generateStaticParamsFor("mdxPath");
 
@@ -54,9 +55,11 @@ export default async function Page(props) {
   const url = `https://amarjannat.com/${params.mdxPath?.join("/") || ""}`;
 
   return (
-    <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
-      <JsonLd metadata={metadata} url={url} />
-      <MDXContent {...props} params={params} components={components} />
-    </Wrapper>
+    <LearningProvider>
+      <Wrapper toc={toc} metadata={metadata} sourceCode={sourceCode}>
+        <JsonLd metadata={metadata} url={url} />
+        <MDXContent {...props} params={params} components={components} />
+      </Wrapper>
+    </LearningProvider>
   );
 }

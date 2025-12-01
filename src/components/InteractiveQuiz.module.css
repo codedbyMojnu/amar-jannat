@@ -1,0 +1,519 @@
+.quizContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+.quizHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quizTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.titleEn {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.progressInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.questionCounter {
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  transition: width 0.3s ease;
+}
+
+.questionCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.difficultyBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pointsBadge {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.questionText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.codeBlock {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.optionButton:hover:not(:disabled) {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.optionButton.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.optionButton:disabled {
+  cursor: default;
+}
+
+.optionButton.correct {
+  border-color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.optionButton.incorrect {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.optionLetter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  font-weight: 600;
+  color: #4b5563;
+  flex-shrink: 0;
+}
+
+.selected .optionLetter {
+  background-color: #2563eb;
+  color: white;
+}
+
+.correct .optionLetter {
+  background-color: #10b981;
+  color: white;
+}
+
+.incorrect .optionLetter {
+  background-color: #ef4444;
+  color: white;
+}
+
+.optionText {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.hintSection {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hintButton {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.hintButton:hover {
+  color: #374151;
+}
+
+.hintContent {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  background-color: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 0.5rem;
+  color: #92400e;
+  font-size: 0.95rem;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #374151;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nextButton {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.nextButton:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+/* Results Styles */
+.resultsContainer {
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.scoreCircle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#2563eb var(--percentage), #e5e7eb 0);
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scoreCircle::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+}
+
+.scoreText {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.percentageText {
+  position: relative;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.resultsTitle {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.resultsSummary {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+  background: #f9fafb;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.retryButton {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.retryButton:hover {
+  background-color: #1d4ed8;
+}
+
+.reviewSection {
+  margin-top: 4rem;
+  text-align: left;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.reviewTitle {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviewItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.reviewItem.correct {
+  border-left: 4px solid #10b981;
+}
+
+.reviewItem.incorrect {
+  border-left: 4px solid #ef4444;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.questionNumber {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.correctBadge {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.incorrectBadge {
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.reviewQuestion {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.reviewAnswers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.answerRow {
+  line-height: 1.5;
+}
+
+.explanation {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.summaryIcon {
+  font-size: 1.2rem;
+}
+
+.resultActions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .quizTitle,
+  .questionText,
+  .resultsTitle,
+  .reviewTitle,
+  .reviewQuestion {
+    color: #f3f4f6;
+  }
+
+  .titleEn,
+  .questionCounter,
+  .pointsBadge,
+  .optionText,
+  .percentageText,
+  .summaryItem,
+  .questionNumber,
+  .reviewAnswers,
+  .explanation {
+    color: #9ca3af;
+  }
+
+  .questionCard,
+  .resultsContainer,
+  .reviewItem {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .optionButton {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .optionButton:hover:not(:disabled) {
+    background-color: #374151;
+    border-color: #60a5fa;
+  }
+
+  .optionButton.selected {
+    background-color: #1e3a8a;
+    border-color: #3b82f6;
+  }
+
+  .optionLetter {
+    background-color: #374151;
+    color: #e5e7eb;
+  }
+
+  .navButton {
+    background: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .navButton:hover:not(:disabled) {
+    background-color: #4b5563;
+  }
+
+  .pointsBadge {
+    background-color: #374151;
+    color: #e5e7eb;
+  }
+
+  .summaryItem {
+    background: #374151;
+    color: #e5e7eb;
+  }
+
+  .explanation {
+    background-color: #374151;
+    color: #e5e7eb;
+  }
+}
